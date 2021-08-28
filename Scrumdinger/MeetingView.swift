@@ -26,6 +26,9 @@ struct MeetingView: View {
                 
                 
             }
+            .accessibilityElement(children: /*@START_MENU_TOKEN@*/.ignore/*@END_MENU_TOKEN@*/)
+            .accessibilityLabel(Text("TIme remaning"))
+            .accessibilityValue(Text("10 minutes"))
             Circle()
                 .strokeBorder(lineWidth: 24, antialiased: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             HStack{
@@ -34,6 +37,7 @@ struct MeetingView: View {
                 Button(action: {}) {
                     Image(systemName: "forward.fill")
                 }
+                .accessibilityLabel(Text("Next speaker"))
             }
         }
         .padding()
